@@ -3,8 +3,9 @@ This is a module docstring.
 
 This module is used to examine different documentation styles and tools.
 """
+from typing import Tuple
 
-def google_style_do_work(task_id: int, name: str) -> tuple(bool, list):
+def google_style_do_work(task_id: int, name: str) -> Tuple[bool, list]:
     """ Perform work with task_id by assigning it to name.
 
     This doesn't really do anything, but I wanted to establish a short 'first line' description and
@@ -26,10 +27,10 @@ def google_style_do_work(task_id: int, name: str) -> tuple(bool, list):
     
     print(f"assigning task {task_id} to worker {name}.")
 
-    return true, []
+    return True, []
 
 
-def numpy_style_do_work(task_id: int, name: str) -> tuple(bool, list):
+def numpy_style_do_work(task_id: int, name: str) -> Tuple[bool, list]:
     """ Perform work with task_id by assigning it to name.
 
     This doesn't really do anything, but I wanted to establish a short 'first line' description and
@@ -57,33 +58,14 @@ def numpy_style_do_work(task_id: int, name: str) -> tuple(bool, list):
     
     print(f"assigning task {task_id} to worker {name}.")
 
-    return true, []
+    return True, []
 
-def rst_style_do_work(task_id: int, name: str) -> tuple(bool, list):
+def rst_style_do_work(task_id: int, name: str) -> Tuple[bool, list]:
     """ Perform work with task_id by assigning it to name.
 
     This doesn't really do anything, but I wanted to establish a short 'first line' description and
     a longer more detailed descriptions.  I'm curious to see if this creates different behavior
     when generating test or when pop-up hints appear in IDEs. 
-
-    Parameters
-    ----------
-    task_id : int
-        The unique ID of a task to be performed.
-    name : str, optional
-        The name of the worker to perform the task.
-
-    Returns
-    -------
-    bool
-        True if the work was completed successfully.  False if there was a problem.
-    list
-        Log entries from the worker performing the work.
-
-    Raises
-    ------
-    RuntimeError
-        If the task doesn't exist or the worker name doesn't exist.
 
     :param task_id: The unique ID of a task to be performed.
     :type task_id: int
@@ -97,7 +79,7 @@ def rst_style_do_work(task_id: int, name: str) -> tuple(bool, list):
     
     print(f"assigning task {task_id} to worker {name}.")
 
-    return true, []
+    return True, []
 
 
 google_style_do_work(3, "Bob")
